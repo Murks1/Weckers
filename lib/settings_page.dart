@@ -67,6 +67,45 @@ class SettingsPage extends StatelessWidget {
 
                   },
                 ),
+                Container(height: 15,),
+                Text("_____________________________________________",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                  ),
+                ),
+                Container(height: 15,),
+
+                Text("Wecker",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                  ),
+                ),
+                Container(height: 15,),
+                Text("Einschlafzeit mittels FitBit ermitteln",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                  ),
+                ),
+                Switch(
+                  value: true,
+                  onChanged: (bool active){
+
+                  },
+                ),
+                Container(height: 15,),
+                Text("Zeit zum Einschlafen",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                  ),
+                ),
               ],
             )
           )
