@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'global_data.dart';
@@ -11,13 +12,18 @@ class SettingsPage extends StatelessWidget {
           backgroundColor: BACKGROUND_COLOR,
           body: Center(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+
+              crossAxisAlignment: CrossAxisAlignment.start,
+
               children: [
-                Text("Settings",
+                Container(height: 32,),
+
+                Text("Einstellungen",
+
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Roboto',
-                    fontSize: 50,
+                    fontSize: 30,
                   ),
                 ),
                 RaisedButton(
@@ -26,6 +32,35 @@ class SettingsPage extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
+                Text("Uhr",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                  ),
+                ),
+                Container(height: 15,),
+                Text("Zeit mit Sekunden anzeigen",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                  ),
+                ),
+                Switch(
+                  value: true,
+                  onChanged: (bool active){
+
+                  },
+                ),
+                Container(height: 15,),
+                Text("Datum und Uhrzeit ändern",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                  ),
+                ),
                 Switch(
                   value: true,
                   onChanged: (bool active){
@@ -33,7 +68,7 @@ class SettingsPage extends StatelessWidget {
                   },
                 ),
               ],
-            ),
+            )
           )
       ),
     );
