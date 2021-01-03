@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:wecker/Settings.dart';
 import 'package:wecker/global_data.dart';
 import 'package:wecker/settings_page.dart';
 
@@ -36,7 +37,15 @@ class _HomePageState extends State<HomePage> {
   }
   
   String generateTimeString(){
-    return DateFormat('kk:mm').format(getCurrentEUTime());
+    if(Settings.showTimeInSeconds )
+      {
+        return DateFormat('kk:mm:ss').format(getCurrentEUTime());
+      }
+    else
+      {
+        return DateFormat('kk:mm').format(getCurrentEUTime());
+      }
+
   }
 
   String generateDateString(){
@@ -50,7 +59,7 @@ class _HomePageState extends State<HomePage> {
       date = generateDateString();
       setState(() {});
 
-      await Future.delayed(Duration(minutes: 1));
+      await Future.delayed(Duration(seconds: 1));
     }
 
   }

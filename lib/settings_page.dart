@@ -2,9 +2,38 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Settings.dart';
 import 'global_data.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return SettingsPageState();
+  }
+}
+class SettingsPageState extends State<SettingsPage>{
+
+
+  // Funktion Zeit in sekunden anzeigen
+  void onTimeSwitchChange( bool change){
+
+    Settings.showTimeInSeconds = change;
+    Settings.safe();
+    setState(() {
+
+    });
+
+  }
+
+
+  // Funktion
+  @override
+  void initState() {
+
+
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,14 +46,18 @@ class SettingsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(height: 32,),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
 
-                  Text("Einstellungen",
 
-                    style: TextStyle(
+                  children: [ Text("Einstellungen",
+                      style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'Roboto',
                       fontSize: 30,
                     ),
+                  ),]
                   ),
                   RaisedButton(
                     child: Text("Back"),
@@ -51,10 +84,8 @@ class SettingsPage extends StatelessWidget {
                         ),
                       ),
                       Switch(
-                        value: true,
-                        onChanged: (bool active){
-
-                        },
+                        value: Settings.showTimeInSeconds,
+                        onChanged: onTimeSwitchChange,
                       ),
                     ],
                   ),

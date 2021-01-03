@@ -2,18 +2,54 @@ import 'package:flutter/material.dart';
 import 'package:wecker/home_page.dart';
 import 'package:wecker/settings_page.dart';
 
+import 'Settings.dart';
+
 void main() {
   runApp(MyApp());
 }
+class MyApp extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
 
-class MyApp extends StatelessWidget {
+}
+
+class MyAppState extends State<MyApp> {
   // This widget is the root of your application.
+
+  // Klassenvariable
+  Widget screen;
+
+  // Home Page nach Einstellungen laden aufrufen
+  Future loadData()async{
+    await Settings.load();
+    screen = HomePage();
+    setState(() {
+
+    });
+  }
+
+  // erster AUfruf
+  @override
+  void initState() {
+
+    loadData();
+    screen = CircularProgressIndicator();
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Wecker',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      // Home Page anzeigen wenn Einstellungen geladen sind
+      home: screen,
+
+
     );
+
+
   }
 }
