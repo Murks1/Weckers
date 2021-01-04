@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:wecker/Settings.dart';
 import 'package:wecker/global_data.dart';
+import 'package:wecker/neuerWecker_page.dart';
 import 'package:wecker/settings_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,6 +19,7 @@ class _HomePageState extends State<HomePage> {
   String time;
   String date;
 
+  // Europäische Standardzeit zurückgeben
   DateTime getCurrentEUTime(){
     DateTime utc_now = DateTime.now().toUtc();
     DateTime eu_now = utc_now.add(Duration(hours: 1));
@@ -29,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onAddButtonPressed(){
-
+    Navigator.push(context, MaterialPageRoute(builder: (context) => NeuerWeckerPage()),);
   }
 
   void _onSettingsButtonPressed(){
