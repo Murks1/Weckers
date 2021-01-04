@@ -49,6 +49,14 @@ class AlleWeckerState extends State<AlleWeckerPage>{
                         Navigator.pop(context);
                       },
                     ),
+                    Expanded(
+                      child: Container(
+                      ),
+                    ),
+                    Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
                     FlatButton(
                         onPressed: _onAddButtonPressed,
                         shape: CircleBorder(
@@ -59,8 +67,9 @@ class AlleWeckerState extends State<AlleWeckerPage>{
                           child: Icon(Icons.add,color: Colors.white,size: 45,),
                         )
                     ),
-
-
+                  ],
+                ),
+                    Container(height: 64,)
 
 
 
