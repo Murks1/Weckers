@@ -26,7 +26,7 @@ class SettingsPageState extends State<SettingsPage>{
   }
 
 
-  // Funktion
+  // Funktion die als Erstes aufgerufen wird
   @override
   void initState() {
 
@@ -59,12 +59,12 @@ class SettingsPageState extends State<SettingsPage>{
                     ),
                   ),]
                   ),
-                  RaisedButton(
+                 /* RaisedButton(
                     child: Text("Back"),
                     onPressed: (){
                       Navigator.pop(context);
                     },
-                  ),
+                  ),*/
                   Text("Uhr",
                     style: TextStyle(
                       color: Colors.blue,
@@ -100,12 +100,12 @@ class SettingsPageState extends State<SettingsPage>{
                           fontSize: 20,
                         ),
                       ),
-                      Switch(
+                      /*Switch(
                         value: true,
                         onChanged: (bool active){
 
                         },
-                      ),
+                      ),*/
                     ],
                   ),
                   Container(height: 15,),
@@ -148,6 +148,32 @@ class SettingsPageState extends State<SettingsPage>{
                       fontSize: 20,
                     ),
                   ),
+                  Container(height: 30,),
+                  Text("Stummschalten nach ",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Roboto',
+                      fontSize: 20,
+                    ),
+                  ),
+                  Container(height: 30,),
+                  Text("Stummschalten nach",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Roboto',
+                      fontSize: 20,
+                    ),
+                  ),
+                  Container(height: 30,),
+                  Text("Schlafenzszeit Benachrichtigung",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Roboto',
+                      fontSize: 20,
+                    ),
+                  ),
+
+
                 ],
               ),
             )
