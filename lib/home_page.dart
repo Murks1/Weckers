@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                 Container(height: 32,),
                 Container(
                     padding: EdgeInsets.symmetric(horizontal: 16),
-                    child: Text("Hier kommen die kommenden Wecker",
+                    child: Text("Nächster Wecker",
                       style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'Roboto',

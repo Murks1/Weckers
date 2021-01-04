@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'Settings.dart';
 import 'global_data.dart';
+import 'neuerWecker_page.dart';
 
 class AlleWeckerPage extends StatefulWidget {
   @override
@@ -11,6 +12,12 @@ class AlleWeckerPage extends StatefulWidget {
   }
 }
 class AlleWeckerState extends State<AlleWeckerPage>{
+
+  // zu Seite "neuer Wecker " wechseln
+  void _onAddButtonPressed(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => NeuerWeckerPage()),);
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -42,7 +49,16 @@ class AlleWeckerState extends State<AlleWeckerPage>{
                         Navigator.pop(context);
                       },
                     ),
-
+                    FlatButton(
+                        onPressed: _onAddButtonPressed,
+                        shape: CircleBorder(
+                            side: BorderSide(color: Colors.white,width: 2)
+                        ),
+                        child: Container(
+                          padding: EdgeInsets.all(4),
+                          child: Icon(Icons.add,color: Colors.white,size: 45,),
+                        )
+                    ),
 
 
 
