@@ -6,6 +6,8 @@ import 'package:wecker/global_data.dart';
 import 'package:wecker/neuerWecker_page.dart';
 import 'package:wecker/settings_page.dart';
 
+import 'alleWecker_page.dart';
+
 class HomePage extends StatefulWidget {
 
   HomePage({Key key}) : super(key: key);
@@ -27,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onAlarmButtonPressed(){
-
+    Navigator.push(context, MaterialPageRoute(builder: (context) => AlleWeckerPage()),);
   }
 
   void _onAddButtonPressed(){
