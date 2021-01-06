@@ -10,14 +10,13 @@ class NeuerWeckerPage extends StatefulWidget {
     return NeuerWeckerState();
   }
 }
-class NeuerWeckerState extends State<NeuerWeckerPage>{
 
-  void _onCleanButtonPressed(){
+class NeuerWeckerState extends State<NeuerWeckerPage> {
+  void _onClearButtonPressed() {
     Navigator.pop(context);
   }
-  void _onCheckButtonPressed(){
 
-  }
+  void _onCheckButtonPressed() {}
 
   @override
   Widget build(BuildContext context) {
@@ -26,26 +25,27 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
           backgroundColor: BACKGROUND_COLOR,
           body: Center(
               child: Container(
-                padding: EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(height: 32,),
+                  padding: EdgeInsets.all(16),
+                  child: Column(children: [
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         FlatButton(
-                            onPressed: _onCleanButtonPressed,
+                            onPressed: _onClearButtonPressed,
                             shape: CircleBorder(
-                                side: BorderSide(color: Colors.white,width: 2)
-                            ),
+                                side:
+                                    BorderSide(color: Colors.white, width: 2)),
                             child: Container(
                               padding: EdgeInsets.all(4),
-                              child: Icon(Icons.clear,color: Colors.white,size: 45,),
-                            )
-                        ),
-                        Text("Neuer Wecker",
+                              child: Icon(
+                                Icons.clear,
+                                color: Colors.white,
+                                size: 45,
+                              ),
+                            )),
+                        Text(
+                          "Neuer Wecker",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -55,285 +55,312 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         FlatButton(
                             onPressed: _onCheckButtonPressed,
                             shape: CircleBorder(
-                                side: BorderSide(color: Colors.white,width: 2)
-                            ),
+                                side:
+                                    BorderSide(color: Colors.white, width: 2)),
                             child: Container(
                               padding: EdgeInsets.all(4),
-                              child: Icon(Icons.check,color: Colors.white,size: 45,),
-                            )
-                        ),
-
+                              child: Icon(
+                                Icons.check,
+                                color: Colors.white,
+                                size: 45,
+                              ),
+                            )),
                       ],
                     ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
+                    Expanded(
+                      child: ListView(
                         children: [
-                          Checkbox(
-                            value: true,
-                            onChanged: (bool active){
-
-                            },
+                          Container(
+                            height: 32,
                           ),
-                          Text("Täglich Wiederholen ",
-                          style: TextStyle(
+                          Container(
+                            height: 15,
+                          ),
+
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Aufsteh Zeit ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
+                          ),
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Optimale Zeit zum Schlafen gehen ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
+                          ),
+                          Divider(
                             color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
                           ),
-                        ),
-
-                        ]
-                    ),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("Aufsteh Zeit ",
-                          style: TextStyle(
+                          Container(
+                            height: 15,
+                          ),
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Checkbox(
+                                  value: true,
+                                  onChanged: (bool active) {},
+                                ),
+                                Text(
+                                  "Täglich Wiederholen ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Divider(
                             color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
                           ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("Optimale Zeit zum Schlafen gehen ",
-                          style: TextStyle(
+                          Container(
+                            height: 15,
+                          ),
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Checkbox(
+                                  value: true,
+                                  onChanged: (bool active) {},
+                                ),
+                                Text(
+                                  "Vibrieren ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
+                          ),
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Checkbox(
+                                  value: true,
+                                  onChanged: (bool active) {},
+                                ),
+                                Text(
+                                  "Sanftes Wecken ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
+                          ),
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Checkbox(
+                                  value: true,
+                                  onChanged: (bool active) {},
+                                ),
+                                Text(
+                                  "Schlafenszeit Benachrichtigung ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
+                          ),
+                          Divider(
                             color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
                           ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [
-                          Checkbox(
-                            value: true,
-                            onChanged: (bool active){
-
-                            },
+                          Container(
+                            height: 15,
                           ),
-                          Text("Vibrieren ",
-                          style: TextStyle(
+
+
+                                Text(
+                                  "Name des Weckers: ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                          Container(
+                            height: 15,
+                          ),
+
+                                  TextField(
+                                 style: TextStyle(
+                                   color: Colors.white,
+                                   fontFamily: 'Roboto',
+                                   fontSize: 20,
+                                 ),
+                                 decoration: InputDecoration(
+                                     hintText: "Wecker Name",
+                                     hintStyle: TextStyle(fontWeight: FontWeight.w300, color: Colors.white24),
+                                     enabledBorder: new OutlineInputBorder(
+                                      borderSide: new BorderSide(
+                                      color: Colors.white24
+                                 )
+                               )
+                                 ),
+                               ),
+
+                          Container(
+                            height: 15,
+                          ),
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Weckerton:  ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
+                          ),
+                          Divider(
                             color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
                           ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [
-                          Checkbox(
-                            value: true,
-                            onChanged: (bool active){
-
-                            },
+                          Container(
+                            height: 15,
                           ),
-                          Text("Sanftes Wecken ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Checkbox(
+                                  value: true,
+                                  onChanged: (bool active) {},
+                                ),
+                                Text(
+                                  "Smart Home:  ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
                           ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [
-                          Checkbox(
-                            value: true,
-                            onChanged: (bool active){
-
-                            },
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "   Staubsauger im EG:  ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
                           ),
-                          Text("Schlafenszeit Benachrichtigung ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "        Lichter und Rolläden  ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
                           ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("Name des Weckers: ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "        Alexa Playlist  ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
                           ),
-                        ),
-                        /*  TextField(
-                            obscureText: true,
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Password',
-                            ),
-                          )*/
-                        ]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("Weckerton:  ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "       + Presets hinzufügen  ",
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ]),
+                          Container(
+                            height: 15,
                           ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Divider(
-                      color: Colors.white,
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [
-                          Checkbox(
-                            value: true,
-                            onChanged: (bool active){
-
-                            },
-                          ),
-                          Text("Smart Home:  ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 20,
-                          ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("   Staubsauger im EG:  ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                          ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("        Lichter und Rolläden  ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                          ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("        Alexa Playlist  ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                          ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("       + Presets hinzufügen  ",
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                          ),
-                        ),]
-                    ),
-                    Container(height: 15,),
-                    Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-
-
-                        children: [ Text("        - Presets löschen  ",
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontFamily: 'Roboto',
-                            fontSize: 15,
-                          ),
-                        ),]
-                    ),
-
-
-
-
-
-
-
-                  ],
-                ),
-              )
-          )
-      ),
+                          Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "        - Presets löschen  ",
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ]),
+                        ],
+                      ),
+                    )
+                  ])))),
     );
-
   }
 }
