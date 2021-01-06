@@ -25,16 +25,22 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
   // Klassenvariablen
   TimeOfDay selectedTime;
   String selectedTimeString;
+  TimeOfDay suggestedTime1;
+  TimeOfDay suggestedTime2;
+  TimeOfDay suggestedTime3;
+  String suggestedTime1String;
+  String suggestedTime2String;
+  String suggestedTime3String;
 
   // Time of Day in Date Time Objekt umwandlen
-  String generateTimeString() {
+  String generateTimeString(TimeOfDay timeOfDay) {
 
     final now = new DateTime.now();
-    final Time = new DateTime(now.year, now.month, now.day, selectedTime.hour, selectedTime.minute);
-    return DateFormat('kk:mm').format(Time);
+    final time = new DateTime(now.year, now.month, now.day, timeOfDay.hour, timeOfDay.minute);
+    return DateFormat('kk:mm').format(time);
     }
 
-// Neue Zeit eintippen, abspeichern
+// Neue Zeit eintippen, abspeichern und aufrufen Sleeptime
   void _onTimeTap() async {
     final TimeOfDay picked = await showTimePicker(
       context: context,
@@ -43,9 +49,8 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
     );
     if(picked != null)
       {
+        updateSleepTime(picked);
 
-        selectedTime = picked;
-        selectedTimeString = generateTimeString();
         setState(() {
 
         });
@@ -53,17 +58,32 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
 
   }
 
+  //
+  void updateSleepTime(TimeOfDay time){
+    selectedTime = time;
+    selectedTimeString = generateTimeString(selectedTime);
+
+    DateTime dateTime = (DateTime.now().add(Duration(hours: 1)));
+    dateTime = new DateTime(dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
+    suggestedTime1 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 9)));
+    suggestedTime2 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7, minutes: 30)));
+    suggestedTime3 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 6)));
+    suggestedTime1String = generateTimeString(suggestedTime1);
+    suggestedTime2String = generateTimeString(suggestedTime2);
+    suggestedTime3String = generateTimeString(suggestedTime3);
+
+  }
+
   @override
   void initState() {
-    // aktuelle Uhrzeit aufrufen, EU zeit (1 Stunde mehr)
-    selectedTime = TimeOfDay.fromDateTime(DateTime.now().add(Duration(hours: 1)));
-    // String aus akuteller Uhrzeit anzeigen
-    selectedTimeString = generateTimeString();
+    // aktuelle Uhrzeit aufrufen und updaten, EU zeit (1 Stunde mehr)
+      updateSleepTime(TimeOfDay.fromDateTime(DateTime.now().add(Duration(hours: 1))));
 
   }
 
   @override
   Widget build(BuildContext context) {
+    // Gesture Deterctor: Bei Weckklicken aus Textfeld wird Textfeld geschlossen
     return GestureDetector(
         onTap: () {
           FocusScopeNode currentFocus = FocusScope.of(context);
@@ -129,7 +149,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               ),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
                                       "Aufsteh Zeit ",
@@ -143,7 +163,12 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               Container(
                                 height: 15,
                               ),
-                              Tapable(
+                              // Tapabel: Element klickbar machen
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children:[
+                                Tapable(
                                 onTap: _onTimeTap,
                                 child: Text(
                                   selectedTimeString,
@@ -155,12 +180,14 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                   ),
                                 ),
                               ),
+                        ],
+                        ),
                               Container(
                                 height: 15,
                               ),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
                                       "Optimale Zeit zum Schlafen gehen ",
@@ -174,6 +201,92 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               Container(
                                 height: 15,
                               ),
+                              Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children:[
+                                  FlatButton(
+                                    onPressed: (){
+
+                                    },
+
+                                   /* borderSide: BorderSide(
+                                      color: Colors.white,
+                                      style: BorderStyle.solid, //Style of the border
+                                      width: 0.8, //width of the border
+
+                                    ),*/
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: new BorderRadius.circular(100),
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+
+                                      child: Text(
+                                        suggestedTime1String,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Roboto',
+                                          fontSize: 30,
+                                        ),
+                                      )
+                                  ),
+                                  FlatButton(
+                                    onPressed: (){
+
+                                    },
+
+                                   /* borderSide: BorderSide(
+                                      color: Colors.white,
+                                      style: BorderStyle.solid, //Style of the border
+                                      width: 0.8, //width of the border
+
+                                    ),*/
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: new BorderRadius.circular(100),
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+
+                                      child: Text(
+                                        suggestedTime2String,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Roboto',
+                                          fontSize: 30,
+                                        ),
+                                      )
+                                  ),
+                                  FlatButton(
+                                    onPressed: (){
+
+                                    },
+
+                                   /* borderSide: BorderSide(
+                                      color: Colors.white,
+                                      style: BorderStyle.solid, //Style of the border
+                                      width: 0.8, //width of the border
+
+                                    ),*/
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: new BorderRadius.circular(100),
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+
+                                      child: Text(
+                                        suggestedTime3String,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Roboto',
+                                          fontSize: 30,
+                                        ),
+                                      )
+                                  )
+
+
+                                ]
+
+
+                              ),
+
                               Divider(
                                 color: Colors.white,
                               ),
