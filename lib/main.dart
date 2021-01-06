@@ -7,12 +7,12 @@ import 'Settings.dart';
 void main() {
   runApp(MyApp());
 }
-class MyApp extends StatefulWidget{
+
+class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return MyAppState();
   }
-
 }
 
 class MyAppState extends State<MyApp> {
@@ -22,21 +22,17 @@ class MyAppState extends State<MyApp> {
   Widget screen;
 
   // Home Page nach Einstellungen laden aufrufen
-  Future loadData()async{
+  Future loadData() async {
     await Settings.load();
     screen = HomePage();
-    setState(() {
-
-    });
+    setState(() {});
   }
 
   // erster AUfruf
   @override
   void initState() {
-
     loadData();
     screen = CircularProgressIndicator();
-
   }
 
   @override
@@ -46,10 +42,8 @@ class MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       // Home Page anzeigen wenn Einstellungen geladen sind
       home: screen,
-
-
+      builder: (context, child) =>
+          MediaQuery(data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true), child: child),
     );
-
-
   }
 }
