@@ -13,7 +13,7 @@ class NeuerWeckerPage extends StatefulWidget {
 class NeuerWeckerState extends State<NeuerWeckerPage>{
 
   void _onCleanButtonPressed(){
-
+    Navigator.pop(context);
   }
   void _onCheckButtonPressed(){
 
