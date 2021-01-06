@@ -69,13 +69,22 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("Täglich Wiederholen ",
+                        children: [
+                          Checkbox(
+                            value: true,
+                            onChanged: (bool active){
+
+                            },
+                          ),
+                          Text("Täglich Wiederholen ",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
                             fontSize: 20,
                           ),
-                        ),]
+                        ),
+
+                        ]
                     ),
                     Divider(
                       color: Colors.white,
@@ -118,7 +127,14 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("Vibrieren ",
+                        children: [
+                          Checkbox(
+                            value: true,
+                            onChanged: (bool active){
+
+                            },
+                          ),
+                          Text("Vibrieren ",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -132,7 +148,14 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("Sanftes Wecken ",
+                        children: [
+                          Checkbox(
+                            value: true,
+                            onChanged: (bool active){
+
+                            },
+                          ),
+                          Text("Sanftes Wecken ",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -146,7 +169,14 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("Schlafenszeit Benachrichtigung ",
+                        children: [
+                          Checkbox(
+                            value: true,
+                            onChanged: (bool active){
+
+                            },
+                          ),
+                          Text("Schlafenszeit Benachrichtigung ",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -196,7 +226,14 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("Smart Home:  ",
+                        children: [
+                          Checkbox(
+                            value: true,
+                            onChanged: (bool active){
+
+                            },
+                          ),
+                          Text("Smart Home:  ",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -224,7 +261,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("   Lichter und Rolläden  ",
+                        children: [ Text("        Lichter und Rolläden  ",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -238,7 +275,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("   Alexa Playlist  ",
+                        children: [ Text("        Alexa Playlist  ",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',
@@ -252,7 +289,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("   + Presets hinzufügen  ",
+                        children: [ Text("       + Presets hinzufügen  ",
                           style: TextStyle(
                             color: Colors.blue,
                             fontFamily: 'Roboto',
@@ -266,7 +303,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                         mainAxisAlignment: MainAxisAlignment.start,
 
 
-                        children: [ Text("   - Presets löschen  ",
+                        children: [ Text("        - Presets löschen  ",
                           style: TextStyle(
                             color: Colors.blue,
                             fontFamily: 'Roboto',
