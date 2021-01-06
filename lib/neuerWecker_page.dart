@@ -11,6 +11,11 @@ class NeuerWeckerPage extends StatefulWidget {
   }
 }
 class NeuerWeckerState extends State<NeuerWeckerPage>{
+
+  void _onAddButtonPressed(){
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -36,12 +41,239 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                           ),
                         ),]
                     ),
-                     RaisedButton(
+                   /*  RaisedButton(
                     child: Text("Back"),
                     onPressed: (){
                       Navigator.pop(context);
                     },
-                  ),
+                  ),*/
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        FlatButton(
+                            onPressed: _onAddButtonPressed,
+                            shape: CircleBorder(
+                                side: BorderSide(color: Colors.white,width: 2)
+                            ),
+                            child: Container(
+                              padding: EdgeInsets.all(4),
+                              child: Icon(Icons.add,color: Colors.white,size: 45,),
+                            )
+                        ),
+                      ],
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Täglich Wiederholen ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Aufsteh Zeit ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Optimale Zeit zum Schlafen gehen ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Vibrieren ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Sanftes Wecken ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Schlafenszeit Benachrichtigung ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Name des Weckers: ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Weckerton:  ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Divider(
+                      color: Colors.white,
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("Smart Home:  ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("   Staubsauger im EG:  ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("   Lichter und Rolläden  ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("   Alexa Playlist  ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("   + Presets hinzufügen  ",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                          ),
+                        ),]
+                    ),
+                    Container(height: 15,),
+                    Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+
+
+                        children: [ Text("   - Presets löschen  ",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontFamily: 'Roboto',
+                            fontSize: 15,
+                          ),
+                        ),]
+                    ),
 
 
 
