@@ -12,7 +12,10 @@ class NeuerWeckerPage extends StatefulWidget {
 }
 class NeuerWeckerState extends State<NeuerWeckerPage>{
 
-  void _onAddButtonPressed(){
+  void _onCleanButtonPressed(){
+
+  }
+  void _onCheckButtonPressed(){
 
   }
 
@@ -29,38 +32,37 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                   children: [
                     Container(height: 32,),
                     Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-
-
-                        children: [ Text("Neuer Wecker",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Roboto',
-                            fontSize: 30,
-                          ),
-                        ),]
-                    ),
-                   /*  RaisedButton(
-                    child: Text("Back"),
-                    onPressed: (){
-                      Navigator.pop(context);
-                    },
-                  ),*/
-                    Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         FlatButton(
-                            onPressed: _onAddButtonPressed,
+                            onPressed: _onCleanButtonPressed,
                             shape: CircleBorder(
                                 side: BorderSide(color: Colors.white,width: 2)
                             ),
                             child: Container(
                               padding: EdgeInsets.all(4),
-                              child: Icon(Icons.add,color: Colors.white,size: 45,),
+                              child: Icon(Icons.clear,color: Colors.white,size: 45,),
                             )
                         ),
+                        Text("Neuer Wecker",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Roboto',
+                            fontSize: 30,
+                          ),
+                        ),
+                        FlatButton(
+                            onPressed: _onCheckButtonPressed,
+                            shape: CircleBorder(
+                                side: BorderSide(color: Colors.white,width: 2)
+                            ),
+                            child: Container(
+                              padding: EdgeInsets.all(4),
+                              child: Icon(Icons.check,color: Colors.white,size: 45,),
+                            )
+                        ),
+
                       ],
                     ),
                     Container(height: 15,),
@@ -200,7 +202,15 @@ class NeuerWeckerState extends State<NeuerWeckerPage>{
                             fontFamily: 'Roboto',
                             fontSize: 20,
                           ),
-                        ),]
+                        ),
+                        /*  TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Password',
+                            ),
+                          )*/
+                        ]
                     ),
                     Container(height: 15,),
                     Row(
