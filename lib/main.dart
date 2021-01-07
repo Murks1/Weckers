@@ -42,8 +42,9 @@ class MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       // Home Page anzeigen wenn Einstellungen geladen sind
       home: screen,
-      builder: (context, child) =>
-          MediaQuery(data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true), child: child),
+      builder: (context, child) => MediaQuery(
+          data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
+          child: child),
     );
   }
 }

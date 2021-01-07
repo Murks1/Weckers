@@ -14,7 +14,6 @@ class NeuerWeckerPage extends StatefulWidget {
 }
 
 class NeuerWeckerState extends State<NeuerWeckerPage> {
-
   // Zurück gehen bei auf Clear Button drücken
   void _onClearButtonPressed() {
     Navigator.pop(context);
@@ -34,51 +33,49 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
 
   // Time of Day in Date Time Objekt umwandlen
   String generateTimeString(TimeOfDay timeOfDay) {
-
     final now = new DateTime.now();
-    final time = new DateTime(now.year, now.month, now.day, timeOfDay.hour, timeOfDay.minute);
+    final time = new DateTime(
+        now.year, now.month, now.day, timeOfDay.hour, timeOfDay.minute);
     return DateFormat('kk:mm').format(time);
-    }
+  }
 
 // Neue Zeit eintippen, abspeichern und aufrufen Sleeptime
   void _onTimeTap() async {
     final TimeOfDay picked = await showTimePicker(
       context: context,
       initialTime: selectedTime,
-
     );
-    if(picked != null)
-      {
-        updateSleepTime(picked);
+    if (picked != null) {
+      updateSleepTime(picked);
 
-        setState(() {
-
-        });
-      }
-
+      setState(() {});
+    }
   }
 
   //
-  void updateSleepTime(TimeOfDay time){
+  void updateSleepTime(TimeOfDay time) {
     selectedTime = time;
     selectedTimeString = generateTimeString(selectedTime);
 
     DateTime dateTime = (DateTime.now().add(Duration(hours: 1)));
-    dateTime = new DateTime(dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
-    suggestedTime1 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 9)));
-    suggestedTime2 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7, minutes: 30)));
-    suggestedTime3 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 6)));
+    dateTime = new DateTime(
+        dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
+    suggestedTime1 =
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 9)));
+    suggestedTime2 = TimeOfDay.fromDateTime(
+        dateTime.subtract(Duration(hours: 7, minutes: 30)));
+    suggestedTime3 =
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 6)));
     suggestedTime1String = generateTimeString(suggestedTime1);
     suggestedTime2String = generateTimeString(suggestedTime2);
     suggestedTime3String = generateTimeString(suggestedTime3);
-
   }
 
   @override
   void initState() {
     // aktuelle Uhrzeit aufrufen und updaten, EU zeit (1 Stunde mehr)
-      updateSleepTime(TimeOfDay.fromDateTime(DateTime.now().add(Duration(hours: 1))));
-
+    updateSleepTime(
+        TimeOfDay.fromDateTime(DateTime.now().add(Duration(hours: 1))));
   }
 
   @override
@@ -167,21 +164,21 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children:[
-                                Tapable(
-                                onTap: _onTimeTap,
-                                child: Text(
-                                  selectedTimeString,
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontFamily: 'Roboto',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 45,
+                                children: [
+                                  Tapable(
+                                    onTap: _onTimeTap,
+                                    child: Text(
+                                      selectedTimeString,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 45,
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
-                        ],
-                        ),
                               Container(
                                 height: 15,
                               ),
@@ -203,89 +200,76 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               ),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children:[
-                                  FlatButton(
-                                    onPressed: (){
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    FlatButton(
+                                        onPressed: () {},
 
-                                    },
-
-                                   /* borderSide: BorderSide(
+                                        /* borderSide: BorderSide(
                                       color: Colors.white,
                                       style: BorderStyle.solid, //Style of the border
                                       width: 0.8, //width of the border
 
                                     ),*/
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: new BorderRadius.circular(100),
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                new BorderRadius.circular(100),
+                                            side: BorderSide(
+                                                color: Colors.white, width: 2)),
+                                        child: Text(
+                                          suggestedTime1String,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 30,
+                                          ),
+                                        )),
+                                    FlatButton(
+                                        onPressed: () {},
 
-                                      child: Text(
-                                        suggestedTime1String,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontFamily: 'Roboto',
-                                          fontSize: 30,
-                                        ),
-                                      )
-                                  ),
-                                  FlatButton(
-                                    onPressed: (){
-
-                                    },
-
-                                   /* borderSide: BorderSide(
+                                        /* borderSide: BorderSide(
                                       color: Colors.white,
                                       style: BorderStyle.solid, //Style of the border
                                       width: 0.8, //width of the border
 
                                     ),*/
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: new BorderRadius.circular(100),
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                new BorderRadius.circular(100),
+                                            side: BorderSide(
+                                                color: Colors.white, width: 2)),
+                                        child: Text(
+                                          suggestedTime2String,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 30,
+                                          ),
+                                        )),
+                                    FlatButton(
+                                        onPressed: () {},
 
-                                      child: Text(
-                                        suggestedTime2String,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontFamily: 'Roboto',
-                                          fontSize: 30,
-                                        ),
-                                      )
-                                  ),
-                                  FlatButton(
-                                    onPressed: (){
-
-                                    },
-
-                                   /* borderSide: BorderSide(
+                                        /* borderSide: BorderSide(
                                       color: Colors.white,
                                       style: BorderStyle.solid, //Style of the border
                                       width: 0.8, //width of the border
 
                                     ),*/
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: new BorderRadius.circular(100),
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
-
-                                      child: Text(
-                                        suggestedTime3String,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontFamily: 'Roboto',
-                                          fontSize: 30,
-                                        ),
-                                      )
-                                  )
-
-
-                                ]
-
-
-                              ),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                new BorderRadius.circular(100),
+                                            side: BorderSide(
+                                                color: Colors.white, width: 2)),
+                                        child: Text(
+                                          suggestedTime3String,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 30,
+                                          ),
+                                        ))
+                                  ]),
 
                               Divider(
                                 color: Colors.white,
@@ -293,6 +277,131 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               Container(
                                 height: 15,
                               ),
+                              Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    FlatButton(
+                                      onPressed: () {},
+                                      shape: CircleBorder(
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+                                      child: Container(
+                                        padding: EdgeInsets.all(4),
+                                        child: Text(
+                                          "Mo",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FlatButton(
+                                      onPressed: () {},
+                                      shape: CircleBorder(
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+                                      child: Container(
+                                        padding: EdgeInsets.all(4),
+                                        child: Text(
+                                          "Di",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FlatButton(
+                                      onPressed: () {},
+                                      shape: CircleBorder(
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+                                      child: Container(
+                                        padding: EdgeInsets.all(4),
+                                        child: Text(
+                                          "Mi",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FlatButton(
+                                      onPressed: () {},
+                                      shape: CircleBorder(
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+                                      child: Container(
+                                        padding: EdgeInsets.all(4),
+                                        child: Text(
+                                          "Do",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FlatButton(
+                                      onPressed: () {},
+                                      shape: CircleBorder(
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+                                      child: Container(
+                                        padding: EdgeInsets.all(4),
+                                        child: Text(
+                                          "Fr",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FlatButton(
+                                      onPressed: () {},
+                                      shape: CircleBorder(
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+                                      child: Container(
+                                        padding: EdgeInsets.all(4),
+                                        child: Text(
+                                          "Sa",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FlatButton(
+                                      onPressed: () {},
+                                      shape: CircleBorder(
+                                          side: BorderSide(
+                                              color: Colors.white, width: 2)),
+                                      child: Container(
+                                        padding: EdgeInsets.all(4),
+                                        child: Text(
+                                          "So",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ]),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
