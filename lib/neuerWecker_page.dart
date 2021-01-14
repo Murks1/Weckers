@@ -61,11 +61,11 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
     dateTime = new DateTime(
         dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
     suggestedTime1 =
-        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 9)));
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 8)));
     suggestedTime2 = TimeOfDay.fromDateTime(
         dateTime.subtract(Duration(hours: 7, minutes: 30)));
     suggestedTime3 =
-        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 6)));
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7)));
     suggestedTime1String = generateTimeString(suggestedTime1);
     suggestedTime2String = generateTimeString(suggestedTime2);
     suggestedTime3String = generateTimeString(suggestedTime3);
@@ -280,13 +280,15 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    FlatButton(
-                                      onPressed: () {},
-                                      shape: CircleBorder(
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                    Tapable(
+                                    child: Container(
+                                      decoration: ShapeDecoration(
+                                        shape: CircleBorder(
+                                            side: BorderSide(
+                                                color: Colors.white, width: 2)),
+                                      ),
                                       child: Container(
                                         padding: EdgeInsets.all(4),
                                         child: Text(
@@ -298,12 +300,19 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                           ),
                                         ),
                                       ),
+                                    )
                                     ),
-                                    FlatButton(
-                                      onPressed: () {},
+                                    Tapable(
+                                    child: Container(
+                                      decoration: ShapeDecoration(
+                                    shape: CircleBorder(
+                                    side: BorderSide(
+                                    color: Colors.white, width: 2)),
+                                      ),
+                                     /* onPressed: () {},
                                       shape: CircleBorder(
                                           side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                              color: Colors.white, width: 2)),*/
                                       child: Container(
                                         padding: EdgeInsets.all(4),
                                         child: Text(
@@ -315,12 +324,17 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                           ),
                                         ),
                                       ),
+                                    )
                                     ),
-                                    FlatButton(
-                                      onPressed: () {},
-                                      shape: CircleBorder(
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
+
+                                      Tapable(
+                                          child: Container(
+                                            decoration: ShapeDecoration(
+                                              shape: CircleBorder(
+                                                  side: BorderSide(
+                                                      color: Colors.white, width: 2)),
+                                            ),
+
                                       child: Container(
                                         padding: EdgeInsets.all(4),
                                         child: Text(
@@ -333,11 +347,15 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         ),
                                       ),
                                     ),
-                                    FlatButton(
-                                      onPressed: () {},
-                                      shape: CircleBorder(
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                   ),
+                                    Tapable(
+                                        child: Container(
+                                          decoration: ShapeDecoration(
+                                            shape: CircleBorder(
+                                                side: BorderSide(
+                                                    color: Colors.white, width: 2)),
+                                          ),
+
                                       child: Container(
                                         padding: EdgeInsets.all(4),
                                         child: Text(
@@ -350,11 +368,14 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         ),
                                       ),
                                     ),
-                                    FlatButton(
-                                      onPressed: () {},
-                                      shape: CircleBorder(
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                 ),
+                                    Tapable(
+                                    child: Container(
+                                    decoration: ShapeDecoration(
+                                    shape: CircleBorder(
+                                    side: BorderSide(
+                                    color: Colors.white, width: 2)),
+                                    ),
                                       child: Container(
                                         padding: EdgeInsets.all(4),
                                         child: Text(
@@ -367,13 +388,18 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         ),
                                       ),
                                     ),
-                                    FlatButton(
-                                      onPressed: () {},
-                                      shape: CircleBorder(
-                                          side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                  ),
+                                    Tapable(
                                       child: Container(
-                                        padding: EdgeInsets.all(4),
+                                      decoration: ShapeDecoration(
+                                        shape: CircleBorder(
+                                      side: BorderSide(
+                                        color: Colors.white, width: 2)),
+                                           ),
+
+
+                                        child: Container(
+                                          padding: EdgeInsets.all(4),
                                         child: Text(
                                           "Sa",
                                           style: TextStyle(
@@ -384,11 +410,15 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         ),
                                       ),
                                     ),
-                                    FlatButton(
-                                      onPressed: () {},
-                                      shape: CircleBorder(
+                                      ),
+                                    Tapable(
+
+                                      child: Container(
+                                            decoration: ShapeDecoration(
+                                          shape: CircleBorder(
                                           side: BorderSide(
-                                              color: Colors.white, width: 2)),
+                                        color: Colors.white, width: 2)),
+                                    ),
                                       child: Container(
                                         padding: EdgeInsets.all(4),
                                         child: Text(
@@ -401,7 +431,8 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         ),
                                       ),
                                     ),
-                                  ]),
+                                  ),
+                              ]),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
