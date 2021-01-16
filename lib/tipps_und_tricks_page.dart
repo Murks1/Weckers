@@ -46,7 +46,7 @@ class TippsUndTricksState extends State<TippsUndTricksPage> {
                           children: [
 
                             Text(
-                              "Neuer Wecker",
+                              "Tipps und Tricks",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Roboto',
@@ -69,19 +69,126 @@ class TippsUndTricksState extends State<TippsUndTricksPage> {
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(
-                                      "Aufsteh Zeit ",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'Roboto',
-                                        fontSize: 20,
+                                    Container(
+                                      width: 350,
+                                      child: Text(
+                              "Deine täglichen Aktivitäten können Einfluss auf deinen Schlaf haben. Hier sind ein paar Tipps, die dir zu einem besseren Schlaf verhelfen können, sodass du ausgeruht aufwachst. ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 20,
+                                    ),
                                       ),
                                     ),
+
+                                  ]),
+                              Container(
+                                height: 30,
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+
+                                  Text(
+                                    "Am Tag",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Roboto',
+                                      fontSize: 25,
+                                    ),
+                                  ),
+
+                                ],
+                              ),
+                              Container(
+                                height: 15,
+                              ),
+                              Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                        Icons.wb_sunny_sharp,
+                                        color: Colors.white,
+                                        size: 45,
+                                    ),
+                                    Container(
+                                      width: 20,
+                                    ),
+                                    Container(
+                                      width: 280,
+                                      child: Text(
+                                        "Halte dich regelmäßig im Sonnenlicht auf. Plane dafür etwa 30 Minuten pro Tag ein, vorzugsweise am Morgen. ",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Roboto',
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                    ),
+
                                   ]),
                               Container(
                                 height: 15,
                               ),
-                              // Tapabel: Element klickbar machen
+                              Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.smoke_free,
+                                      color: Colors.white,
+                                      size: 45,
+                                    ),
+                                    Container(
+                                      width: 20,
+                                    ),
+                                    Container(
+                                      width: 280,
+                                      child: Text(
+                                        "Vermeide Nikotin und Koffein, da beides Stimulanzien sind, die dich wachhalten können. ",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Roboto',
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                    ),
+
+                                  ]),
+                              Container(
+                                height: 15,
+                              ),
+                              Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.single_bed,
+                                      color: Colors.white,
+                                      size: 45,
+                                    ),
+                                    Container(
+                                      width: 20,
+                                    ),
+                                    Container(
+                                      width: 280,
+                                      child: Text(
+                                        "Wenn du ein Nickerchen machst, achte darauf, dass dies nicht innerhalb von sechs Stunden vor deiner normalen Schlafenszeit geschieht ",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Roboto',
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                    ),
+
+                                  ]),
+                              Container(
+                                height: 15,
+                              ),
+
                               ]
 
                           ),
