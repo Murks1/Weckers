@@ -80,7 +80,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
 
   @override
   Widget build(BuildContext context) {
-    // Gesture Deterctor: Bei Weckklicken aus Textfeld wird Textfeld geschlossen
+    // Gesture Deterctor: Bei Wegklicken aus Textfeld wird Textfeld geschlossen
     return GestureDetector(
         onTap: () {
           FocusScopeNode currentFocus = FocusScope.of(context);

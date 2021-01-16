@@ -4,6 +4,8 @@ import 'package:wecker/Settings.dart';
 import 'package:wecker/global_data.dart';
 import 'package:wecker/neuerWecker_page.dart';
 import 'package:wecker/settings_page.dart';
+import 'package:wecker/tipps_und_tricks_page.dart';
+import 'package:wecker/wissenswertes_page.dart';
 
 import 'alleWecker_page.dart';
 
@@ -30,18 +32,28 @@ class SideDrawer extends StatelessWidget {
               ),
             ),
             decoration: BoxDecoration(
-              color: Colors.blueGrey,
+              color: BACKGROUND_COLOR,
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home),
+            leading: Icon(Icons.emoji_objects_outlined),
             title: Text('Tipps und Tricks'),
-            onTap: () => {},
+            onTap: () => {{
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TippsUndTricksPage()),
+                )
+              }}
           ),
           ListTile(
-            leading: Icon(Icons.shopping_cart),
+            leading: Icon(Icons.wb_cloudy_rounded),
             title: Text('Wissenswertes'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {{
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => WissenswertesPage()),
+              )
+            }}
           ),
           ListTile(
             leading: Icon(Icons.border_color),
