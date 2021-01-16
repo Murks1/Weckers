@@ -283,7 +283,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Tapable(
-                                    child: Container(
+                                        child: Container(
                                       decoration: ShapeDecoration(
                                         shape: CircleBorder(
                                             side: BorderSide(
@@ -300,16 +300,15 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                           ),
                                         ),
                                       ),
-                                    )
-                                    ),
+                                    )),
                                     Tapable(
-                                    child: Container(
+                                        child: Container(
                                       decoration: ShapeDecoration(
-                                    shape: CircleBorder(
-                                    side: BorderSide(
-                                    color: Colors.white, width: 2)),
+                                        shape: CircleBorder(
+                                            side: BorderSide(
+                                                color: Colors.white, width: 2)),
                                       ),
-                                     /* onPressed: () {},
+                                      /* onPressed: () {},
                                       shape: CircleBorder(
                                           side: BorderSide(
                                               color: Colors.white, width: 2)),*/
@@ -324,115 +323,113 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                           ),
                                         ),
                                       ),
-                                    )
-                                    ),
-
-                                      Tapable(
-                                          child: Container(
-                                            decoration: ShapeDecoration(
-                                              shape: CircleBorder(
-                                                  side: BorderSide(
-                                                      color: Colors.white, width: 2)),
-                                            ),
-
-                                      child: Container(
-                                        padding: EdgeInsets.all(4),
-                                        child: Text(
-                                          "Mi",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'Roboto',
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                   ),
-                                    Tapable(
-                                        child: Container(
-                                          decoration: ShapeDecoration(
-                                            shape: CircleBorder(
-                                                side: BorderSide(
-                                                    color: Colors.white, width: 2)),
-                                          ),
-
-                                      child: Container(
-                                        padding: EdgeInsets.all(4),
-                                        child: Text(
-                                          "Do",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'Roboto',
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                 ),
-                                    Tapable(
-                                    child: Container(
-                                    decoration: ShapeDecoration(
-                                    shape: CircleBorder(
-                                    side: BorderSide(
-                                    color: Colors.white, width: 2)),
-                                    ),
-                                      child: Container(
-                                        padding: EdgeInsets.all(4),
-                                        child: Text(
-                                          "Fr",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'Roboto',
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                    )),
                                     Tapable(
                                       child: Container(
-                                      decoration: ShapeDecoration(
-                                        shape: CircleBorder(
-                                      side: BorderSide(
-                                        color: Colors.white, width: 2)),
-                                           ),
-
-
+                                        decoration: ShapeDecoration(
+                                          shape: CircleBorder(
+                                              side: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 2)),
+                                        ),
                                         child: Container(
                                           padding: EdgeInsets.all(4),
-                                        child: Text(
-                                          "Sa",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'Roboto',
-                                            fontSize: 20,
+                                          child: Text(
+                                            "Mi",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Roboto',
+                                              fontSize: 20,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                      ),
                                     Tapable(
-
                                       child: Container(
-                                            decoration: ShapeDecoration(
+                                        decoration: ShapeDecoration(
                                           shape: CircleBorder(
-                                          side: BorderSide(
-                                        color: Colors.white, width: 2)),
-                                    ),
-                                      child: Container(
-                                        padding: EdgeInsets.all(4),
-                                        child: Text(
-                                          "So",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'Roboto',
-                                            fontSize: 20,
+                                              side: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 2)),
+                                        ),
+                                        child: Container(
+                                          padding: EdgeInsets.all(4),
+                                          child: Text(
+                                            "Do",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Roboto',
+                                              fontSize: 20,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                              ]),
+                                    Tapable(
+                                      child: Container(
+                                        decoration: ShapeDecoration(
+                                          shape: CircleBorder(
+                                              side: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 2)),
+                                        ),
+                                        child: Container(
+                                          padding: EdgeInsets.all(4),
+                                          child: Text(
+                                            "Fr",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Roboto',
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Tapable(
+                                      child: Container(
+                                        decoration: ShapeDecoration(
+                                          shape: CircleBorder(
+                                              side: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 2)),
+                                        ),
+                                        child: Container(
+                                          padding: EdgeInsets.all(4),
+                                          child: Text(
+                                            "Sa",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Roboto',
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Tapable(
+                                      child: Container(
+                                        decoration: ShapeDecoration(
+                                          shape: CircleBorder(
+                                              side: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 2)),
+                                        ),
+                                        child: Container(
+                                          padding: EdgeInsets.all(4),
+                                          child: Text(
+                                            "So",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: 'Roboto',
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ]),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,

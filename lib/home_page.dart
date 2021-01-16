@@ -14,6 +14,51 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+// Side Drawer Menu
+class SideDrawer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: Column(
+        children: <Widget>[
+          DrawerHeader(
+            child: Center(
+              child: Text(
+                'Weitere Infos zur Schlafapp',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white, fontSize: 25),
+              ),
+            ),
+            decoration: BoxDecoration(
+              color: Colors.blueGrey,
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Tipps und Tricks'),
+            onTap: () => {},
+          ),
+          ListTile(
+            leading: Icon(Icons.shopping_cart),
+            title: Text('Wissenswertes'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Icon(Icons.border_color),
+            title: Text('Traumtagebuch'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Logout'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _HomePageState extends State<HomePage> {
   String time;
   String date;
@@ -86,6 +131,12 @@ class _HomePageState extends State<HomePage> {
         child: SafeArea(
           child: Scaffold(
               backgroundColor: BACKGROUND_COLOR,
+              // Menu Bar, Side Drawer aufrufen
+              drawer: SideDrawer(),
+              appBar: AppBar(
+                backgroundColor: BACKGROUND_COLOR,
+                title: Text('Willkommen zur Schlafapp'),
+              ),
               body: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
