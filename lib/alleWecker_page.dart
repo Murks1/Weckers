@@ -5,9 +5,6 @@ import 'Settings.dart';
 import 'global_data.dart';
 import 'neuerWecker_page.dart';
 
-
-
-
 class AlleWeckerPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

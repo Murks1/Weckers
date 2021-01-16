@@ -36,25 +36,29 @@ class SideDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.emoji_objects_outlined),
-            title: Text('Tipps und Tricks'),
-            onTap: () => {{
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => TippsUndTricksPage()),
-                )
-              }}
-          ),
+              leading: Icon(Icons.emoji_objects_outlined),
+              title: Text('Tipps und Tricks'),
+              onTap: () => {
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TippsUndTricksPage()),
+                      )
+                    }
+                  }),
           ListTile(
-            leading: Icon(Icons.wb_cloudy_rounded),
-            title: Text('Wissenswertes'),
-            onTap: () => {{
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => WissenswertesPage()),
-              )
-            }}
-          ),
+              leading: Icon(Icons.wb_cloudy_rounded),
+              title: Text('Wissenswertes'),
+              onTap: () => {
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => WissenswertesPage()),
+                      )
+                    }
+                  }),
           ListTile(
             leading: Icon(Icons.border_color),
             title: Text('Traumtagebuch'),

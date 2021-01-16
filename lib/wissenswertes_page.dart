@@ -5,9 +5,6 @@ import 'Settings.dart';
 import 'global_data.dart';
 import 'neuerWecker_page.dart';
 
-
-
-
 class WissenswertesPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -44,7 +41,6 @@ class WissenswertesState extends State<WissenswertesPage> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-
                             Text(
                               "Wissenswertes",
                               style: TextStyle(
@@ -53,38 +49,34 @@ class WissenswertesState extends State<WissenswertesPage> {
                                 fontSize: 30,
                               ),
                             ),
-
                           ],
                         ),
                         Expanded(
-                          child: ListView(
-                              children: [
-                                Container(
-                                  height: 32,
-                                ),
-                                Container(
-                                  height: 15,
-                                ),
-                                Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Aufsteh Zeit ",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontFamily: 'Roboto',
-                                          fontSize: 20,
-                                        ),
-                                      ),
-                                    ]),
-                                Container(
-                                  height: 15,
-                                ),
-                                // Tapabel: Element klickbar machen
-                              ]
-
-                          ),
+                          child: ListView(children: [
+                            Container(
+                              height: 32,
+                            ),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Aufsteh Zeit ",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Roboto',
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 15,
+                            ),
+                            // Tapabel: Element klickbar machen
+                          ]),
                         )
                       ])))),
         ));
