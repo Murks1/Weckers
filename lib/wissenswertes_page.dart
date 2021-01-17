@@ -96,7 +96,6 @@ class WissenswertesState extends State<WissenswertesPage> {
                                       ),
                                     ),
                                   ),
-
                                 ]),
                             Container(
                               height: 15,
@@ -392,7 +391,6 @@ class WissenswertesState extends State<WissenswertesPage> {
                                     ),
                                   ),
                                 ]),
-
 
                             // Tapabel: Element klickbar machen
                           ]),
