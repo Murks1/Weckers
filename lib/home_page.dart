@@ -5,6 +5,7 @@ import 'package:wecker/global_data.dart';
 import 'package:wecker/neuerWecker_page.dart';
 import 'package:wecker/settings_page.dart';
 import 'package:wecker/tipps_und_tricks_page.dart';
+import 'package:wecker/ueber_die_app_page.dart';
 import 'package:wecker/wissenswertes_page.dart';
 
 import 'alleWecker_page.dart';
@@ -59,6 +60,18 @@ class SideDrawer extends StatelessWidget {
                       )
                     }
                   }),
+          ListTile(
+              leading: Icon(Icons.phone_android),
+              title: Text('Über die App'),
+              onTap: () => {
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => UeberdieAppPage()),
+                  )
+                }
+              }),
           ListTile(
             leading: Icon(Icons.border_color),
             title: Text('Traumtagebuch'),
@@ -151,7 +164,7 @@ class _HomePageState extends State<HomePage> {
               drawer: SideDrawer(),
               appBar: AppBar(
                 backgroundColor: BACKGROUND_COLOR,
-                title: Text('Willkommen zur Schlafapp'),
+                title: Text('Willkommen zur Better-Sleep App'),
               ),
               body: Center(
                 child: Column(

@@ -605,9 +605,6 @@ class TippsUndTricksState extends State<TippsUndTricksPage> {
                                     ),
                                   ),
                                 ]),
-
-
-
                           ]),
                         )
                       ])))),
