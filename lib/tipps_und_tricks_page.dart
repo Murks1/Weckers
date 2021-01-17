@@ -352,6 +352,262 @@ class TippsUndTricksState extends State<TippsUndTricksPage> {
                                     ),
                                   ),
                                 ]),
+                            Container(
+                              height: 30,
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  "Während der Nacht ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 25,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.single_bed,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Achte darauf, dass dein Schlafzimmer dir einen guten Schlaf ermöglicht.",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.nights_stay,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Achte darauf, dass dein Schlafzimmer kühl und dunkel ist.",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.logout,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Verbanne elektronische Geräte und andere Ablenkungen aus deinem Schlafzimmer.",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.hourglass_bottom,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Bleibe nicht wach im Bett liegen. Wenn du länger als 20 Minuten nicht einschlafe kannst, stehe auf und beschäftige dich mit etwas Entspannendem, bis du dich wieder schlafbereit fühlst. ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 30,
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  "Weitere Vorschläge ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 25,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              height: 15,
+                            ),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.calendar_today_sharp,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Versuche, einen möglichst regelmäßigen Schlafzeitplan einzuhalten. ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.lightbulb,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Sorge für helle Beleuchtung, wenn du nachts wach bist und vermeide Sonnenlicht vor dem Zubettgehen. ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.nights_stay,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Falls keine Jalousien oder Vorhänge in deinem Schlafzimmer vorhanden sind, verwende eine Schlafmaske . ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+                            Container(
+                              height: 15,
+                            ),
+                            Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.headset,
+                                    color: Colors.white,
+                                    size: 45,
+                                  ),
+                                  Container(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 280,
+                                    child: Text(
+                                      "Ohrstöpsel mit weichem Rauschen können helfen, Geräusche zu unterdrücken, die dich möglicherweise aufwecken. ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ]),
+
+
+
                           ]),
                         )
                       ])))),
