@@ -109,11 +109,11 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                   child: Icon(
                                     Icons.clear,
                                     color: Colors.white,
-                                    size: 45,
+                                    size: 40,
                                   ),
                                 )),
                             Text(
-                              "Neuer Wecker",
+                              "Neuer Alarm",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Roboto',
@@ -130,7 +130,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                   child: Icon(
                                     Icons.check,
                                     color: Colors.white,
-                                    size: 45,
+                                    size: 40,
                                   ),
                                 )),
                           ],

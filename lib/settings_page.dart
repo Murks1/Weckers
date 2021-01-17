@@ -137,7 +137,7 @@ class SettingsPageState extends State<SettingsPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Einschlafzeit mittels FitBit ermitteln",
+                          "Einschlafzeit via FitBit ermitteln",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Roboto',

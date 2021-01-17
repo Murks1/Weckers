@@ -306,7 +306,7 @@ class WissenswertesState extends State<WissenswertesPage> {
                                   Container(
                                     width: 350,
                                     child: Text(
-                                      "Schlaff trifft ein, wenn sowohl körperliche als auch kognitive Prozesse in einen unbewussten, regenerativen Zustand übergehen. Während du schläfst, verändern oder setzten sich Grundfunktionen des Körpers oder aus, dabei finden wichtige spezialisierte Funktionen statt. ",
+                                      "Schlaf trifft ein, wenn sowohl körperliche als auch kognitive Prozesse in einen unbewussten, regenerativen Zustand übergehen. Während du schläfst, verändern oder setzten sich Grundfunktionen des Körpers oder aus, dabei finden wichtige spezialisierte Funktionen statt. ",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Roboto',
