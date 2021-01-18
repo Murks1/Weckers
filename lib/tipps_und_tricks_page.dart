@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wecker/display_text_widget.dart';
 
 import 'Settings.dart';
 import 'global_data.dart';
@@ -149,30 +150,11 @@ class TippsUndTricksState extends State<TippsUndTricksPage> {
                             Container(
                               height: 15,
                             ),
-                            Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.single_bed,
-                                    color: Colors.white,
-                                    size: 45,
-                                  ),
-                                  Container(
-                                    width: 20,
-                                  ),
-                                  Container(
-                                    width: 280,
-                                    child: Text(
-                                      "Wenn du ein Nickerchen machst, achte darauf, dass dies nicht innerhalb von sechs Stunden vor deiner normalen Schlafenszeit geschieht. ",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'Roboto',
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                  ),
-                                ]),
+                           DisplayText(
+                             icon: Icons.bedtime,
+                             text:  "Wenn du ein Nickerchen machst, achte darauf, dass dies nicht innerhalb von sechs Stunden vor deiner normalen Schlafenszeit geschieht. ",
+                           ),
+
                             Container(
                               height: 15,
                             ),
