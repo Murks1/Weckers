@@ -3,6 +3,8 @@ library global_data;
 import 'dart:ui';
 
 const Color BACKGROUND_COLOR = const Color.fromRGBO(4, 32, 51, 1);
+const String STANDARD_NAME = "Neuer Wecker";
+
 /*
 const Map ex = {
   "wecker1": {

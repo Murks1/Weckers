@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Settings.dart';
+import 'runtime_data.dart';
 import 'global_data.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -14,8 +14,8 @@ class SettingsPage extends StatefulWidget {
 class SettingsPageState extends State<SettingsPage> {
   // Funktion Zeit in sekunden anzeigen
   void onTimeSwitchChange(bool change) {
-    Settings.showTimeInSeconds = change;
-    Settings.safe();
+    RuntimeData.showTimeInSeconds = change;
+    RuntimeData.safe();
     setState(() {});
   }
 
@@ -86,7 +86,7 @@ class SettingsPageState extends State<SettingsPage> {
                           ),
                         ),
                         Switch(
-                          value: Settings.showTimeInSeconds,
+                          value: RuntimeData.showTimeInSeconds,
                           onChanged: onTimeSwitchChange,
                         ),
                       ],

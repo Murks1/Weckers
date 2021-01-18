@@ -2,11 +2,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:wecker/tapable.dart';
+import 'package:wecker/wecker.dart';
 
-import 'Settings.dart';
+import 'runtime_data.dart';
 import 'global_data.dart';
+import 'home_page.dart';
 
 class NeuerWeckerPage extends StatefulWidget {
+
+  Wecker wecker;
+
+  NeuerWeckerPage({
+    this.wecker
+  }){
+    this.wecker ??= new Wecker();
+  }
+
   @override
   State<StatefulWidget> createState() {
     return NeuerWeckerState();
@@ -19,10 +30,22 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
     Navigator.pop(context);
   }
 
-  void _onCheckButtonPressed() {}
+  void _onCheckButtonPressed() {
+    // speichere Wecker
+    if(!RuntimeData.weckerListe.contains(widget.wecker)){
+      RuntimeData.weckerListe.add(widget.wecker);
+    }else{
+      //wenn wecker schon existiert, updaten
+      int indexOfWecker = RuntimeData.weckerListe.indexOf(widget.wecker);
+      RuntimeData.weckerListe[indexOfWecker];
+    }
+
+    RuntimeData.safe();
+
+    Navigator.push(context,MaterialPageRoute(builder: (context) => HomePage()));
+  }
 
   // Klassenvariablen
-  TimeOfDay selectedTime;
   String selectedTimeString;
   TimeOfDay suggestedTime1;
   TimeOfDay suggestedTime2;
@@ -30,6 +53,10 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
   String suggestedTime1String;
   String suggestedTime2String;
   String suggestedTime3String;
+
+  String _onNameChanged(String text){
+    widget.wecker.name = text;
+  }
 
   // Time of Day in Date Time Objekt umwandlen
   String generateTimeString(TimeOfDay timeOfDay) {
@@ -43,7 +70,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
   void _onTimeTap() async {
     final TimeOfDay picked = await showTimePicker(
       context: context,
-      initialTime: selectedTime,
+      initialTime: widget.wecker.weckZeit,
     );
     if (picked != null) {
       updateSleepTime(picked);
@@ -54,18 +81,18 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
 
   //
   void updateSleepTime(TimeOfDay time) {
-    selectedTime = time;
-    selectedTimeString = generateTimeString(selectedTime);
+
+    widget.wecker.weckZeit = time;
+
+    selectedTimeString = generateTimeString(widget.wecker.weckZeit);
 
     DateTime dateTime = (DateTime.now().add(Duration(hours: 1)));
-    dateTime = new DateTime(
-        dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
-    suggestedTime1 =
-        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 8)));
-    suggestedTime2 = TimeOfDay.fromDateTime(
-        dateTime.subtract(Duration(hours: 7, minutes: 30)));
-    suggestedTime3 =
-        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7)));
+    dateTime = new DateTime(dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
+
+    suggestedTime1 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 8)));
+    suggestedTime2 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7, minutes: 30)));
+    suggestedTime3 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7)));
+
     suggestedTime1String = generateTimeString(suggestedTime1);
     suggestedTime2String = generateTimeString(suggestedTime2);
     suggestedTime3String = generateTimeString(suggestedTime3);
@@ -74,8 +101,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
   @override
   void initState() {
     // aktuelle Uhrzeit aufrufen und updaten, EU zeit (1 Stunde mehr)
-    updateSleepTime(
-        TimeOfDay.fromDateTime(DateTime.now().add(Duration(hours: 1))));
+    updateSleepTime(widget.wecker.weckZeit);
   }
 
   @override
@@ -531,6 +557,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                 height: 15,
                               ),
                               TextField(
+                                onChanged: _onNameChanged,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: 'Roboto',

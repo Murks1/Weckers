@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wecker/display_text_widget.dart';
 
-import 'Settings.dart';
+import 'runtime_data.dart';
 import 'global_data.dart';
 import 'neuerWecker_page.dart';
 

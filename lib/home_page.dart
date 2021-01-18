@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:wecker/Settings.dart';
+import 'package:wecker/runtime_data.dart';
 import 'package:wecker/global_data.dart';
 import 'package:wecker/neuerWecker_page.dart';
 import 'package:wecker/settings_page.dart';
@@ -96,6 +96,7 @@ class SideDrawer extends StatelessWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   String time;
   String date;
 
@@ -128,7 +129,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   String generateTimeString() {
-    if (Settings.showTimeInSeconds) {
+    if (RuntimeData.showTimeInSeconds) {
       return DateFormat('kk:mm:ss').format(getCurrentEUTime());
     } else {
       return DateFormat('kk:mm').format(getCurrentEUTime());

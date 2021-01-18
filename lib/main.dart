@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wecker/home_page.dart';
 import 'package:wecker/settings_page.dart';
 
-import 'Settings.dart';
+import 'runtime_data.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +23,7 @@ class MyAppState extends State<MyApp> {
 
   // Home Page nach Einstellungen laden aufrufen
   Future loadData() async {
-    await Settings.load();
+    await RuntimeData.load();
     screen = HomePage();
     setState(() {});
   }
