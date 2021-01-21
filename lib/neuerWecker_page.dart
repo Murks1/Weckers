@@ -231,13 +231,6 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                   children: [
                                     FlatButton(
                                         onPressed: () {},
-
-                                        /* borderSide: BorderSide(
-                                      color: Colors.white,
-                                      style: BorderStyle.solid, //Style of the border
-                                      width: 0.8, //width of the border
-
-                                    ),*/
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 new BorderRadius.circular(100),
@@ -253,13 +246,6 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         )),
                                     FlatButton(
                                         onPressed: () {},
-
-                                        /* borderSide: BorderSide(
-                                      color: Colors.white,
-                                      style: BorderStyle.solid, //Style of the border
-                                      width: 0.8, //width of the border
-
-                                    ),*/
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 new BorderRadius.circular(100),
@@ -275,13 +261,6 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         )),
                                     FlatButton(
                                         onPressed: () {},
-
-                                        /* borderSide: BorderSide(
-                                      color: Colors.white,
-                                      style: BorderStyle.solid, //Style of the border
-                                      width: 0.8, //width of the border
-
-                                    ),*/
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 new BorderRadius.circular(100),

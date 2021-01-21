@@ -162,6 +162,17 @@ class SettingsPageState extends State<SettingsPage> {
                       ),
                     ),
                     Container(
+                      height: 15,
+                    ),
+                    Text(
+                      "20 min",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Roboto',
+                        fontSize: 15,
+                      ),
+                    ),
+                    Container(
                       height: 30,
                     ),
                     Text(
@@ -173,14 +184,36 @@ class SettingsPageState extends State<SettingsPage> {
                       ),
                     ),
                     Container(
+                      height: 15,
+                    ),
+                    Text(
+                      "15 min",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Roboto',
+                        fontSize: 15,
+                      ),
+                    ),
+                    Container(
                       height: 30,
                     ),
                     Text(
-                      "Stummschalten nach",
+                      "Dauer der Schlummerfunktion",
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Roboto',
                         fontSize: 20,
+                      ),
+                    ),
+                    Container(
+                      height: 15,
+                    ),
+                    Text(
+                      "5 min",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Roboto',
+                        fontSize: 15,
                       ),
                     ),
                     Container(
@@ -192,6 +225,17 @@ class SettingsPageState extends State<SettingsPage> {
                         color: Colors.white,
                         fontFamily: 'Roboto',
                         fontSize: 20,
+                      ),
+                    ),
+                    Container(
+                      height: 15,
+                    ),
+                    Text(
+                      "30 min",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Roboto',
+                        fontSize: 15,
                       ),
                     ),
                   ],

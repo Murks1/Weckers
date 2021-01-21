@@ -31,7 +31,7 @@ class WeckerDisplayWidget extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Roboto',
-                    fontSize: 30,
+                    fontSize: 25,
                   ),
                 ),
               ),
@@ -45,7 +45,7 @@ class WeckerDisplayWidget extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontFamily: 'Roboto',
-              fontSize: 23,
+              fontSize: 20,
             ),
           ),
         ],

@@ -28,7 +28,7 @@ class SideDrawer extends StatelessWidget {
           DrawerHeader(
             child: Center(
               child: Text(
-                'Weitere Infos zur Schlafapp',
+                'Weitere Infos zur App',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white, fontSize: 25),
               ),
@@ -172,7 +172,7 @@ class _HomePageState extends State<HomePage> {
               drawer: SideDrawer(),
               appBar: AppBar(
                 backgroundColor: BACKGROUND_COLOR,
-                title: Text('Willkommen zur Better-Sleep App'),
+                title: Text('Willkommen zur Sleep-Better App'),
               ),
               body: Center(
                 child: Column(
@@ -196,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 32,
                     ),
-                    Container(
+                    /*Container(
                         padding: EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
                           "Nächster Wecker",
@@ -204,7 +204,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.white,
                               fontFamily: 'Roboto',
                               fontSize: 30),
-                        )),
+                        )),*/
                     Expanded(
                       child: Container(),
                     ),
