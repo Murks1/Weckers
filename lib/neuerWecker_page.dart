@@ -147,6 +147,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                               ),
                             ),
                             FlatButton(
+                                color: Colors.blue,
                                 onPressed: _onCheckButtonPressed,
                                 shape: CircleBorder(
                                     side: BorderSide(
@@ -206,7 +207,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                 ],
                               ),
                               Container(
-                                height: 15,
+                                height: 30,
                               ),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -230,6 +231,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     FlatButton(
+                                        color: Colors.blue,
                                         onPressed: () {},
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
@@ -275,7 +277,9 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                           ),
                                         ))
                                   ]),
-
+                              Container(
+                                height: 15,
+                              ),
                               Divider(
                                 color: Colors.white,
                               ),
@@ -435,6 +439,9 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                       ),
                                     ),
                                   ]),
+                              Container(
+                                height: 15,
+                              ),
                               Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -452,6 +459,9 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                       ),
                                     ),
                                   ]),
+                              Container(
+                                height: 15,
+                              ),
                               Divider(
                                 color: Colors.white,
                               ),
@@ -559,14 +569,27 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Weckerton:  ",
+                                      "Weckerton: ",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Roboto',
                                         fontSize: 20,
                                       ),
                                     ),
+
                                   ]),
+
+                              Container(
+                                height: 15,
+                              ),
+                              Text(
+                                "New Horizon",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'Roboto',
+                                  fontSize: 15,
+                                ),
+                              ),
                               Container(
                                 height: 15,
                               ),
