@@ -174,7 +174,8 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: BACKGROUND_COLOR,
                 title: Text('Willkommen zur Sleep-Better App'),
               ),
-              body: Center(
+              body:
+              Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -205,8 +206,18 @@ class _HomePageState extends State<HomePage> {
                               fontFamily: 'Roboto',
                               fontSize: 30),
                         )),*/
+                    Container(
+                      height: 32,
+                    ),
+                    //Image.asset('assets/images/WeckerLogo1.png'),
                     Expanded(
-                      child: Container(),
+                      child: Image.asset(
+                          'assets/images/WeckerLogo1.png'
+                      )
+
+                    ),
+                    Container(
+                      height: 60,
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,

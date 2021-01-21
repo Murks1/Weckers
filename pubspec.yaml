@@ -27,4 +27,6 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
+  assets:
+   - assets/images/WeckerLogo1.png
 
