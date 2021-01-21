@@ -150,11 +150,11 @@ class TippsUndTricksState extends State<TippsUndTricksPage> {
                             Container(
                               height: 15,
                             ),
-                           DisplayText(
-                             icon: Icons.bedtime,
-                             text:  "Wenn du ein Nickerchen machst, achte darauf, dass dies nicht innerhalb von sechs Stunden vor deiner normalen Schlafenszeit geschieht. ",
-                           ),
-
+                            DisplayText(
+                              icon: Icons.bedtime,
+                              text:
+                                  "Wenn du ein Nickerchen machst, achte darauf, dass dies nicht innerhalb von sechs Stunden vor deiner normalen Schlafenszeit geschieht. ",
+                            ),
                             Container(
                               height: 15,
                             ),

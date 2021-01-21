@@ -17,39 +17,37 @@ class WeckerDisplayWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     String weckZeitString = generateTimeString(wecker.weckZeit);
 
     return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Expanded(
-                child: Text(
-                  wecker.name,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Roboto',
-                    fontSize: 25,
-                  ),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                wecker.name,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Roboto',
+                  fontSize: 25,
                 ),
               ),
-              Switch(
-                value: true,
-              )
-            ],
-          ),
-          Text(
-            weckZeitString,
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'Roboto',
-              fontSize: 20,
             ),
+            Switch(
+              value: true,
+            )
+          ],
+        ),
+        Text(
+          weckZeitString,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Roboto',
+            fontSize: 20,
           ),
-        ],
-
+        ),
+      ],
     );
   }
 }

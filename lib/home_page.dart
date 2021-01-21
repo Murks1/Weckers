@@ -96,7 +96,6 @@ class SideDrawer extends StatelessWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   String time;
   String date;
 
@@ -174,8 +173,7 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: BACKGROUND_COLOR,
                 title: Text('Willkommen zur Sleep-Better App'),
               ),
-              body:
-              Center(
+              body: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -211,11 +209,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     //Image.asset('assets/images/WeckerLogo1.png'),
                     Expanded(
-                      child: Image.asset(
-                          'assets/images/WeckerLogo1.png'
-                      )
-
-                    ),
+                        child: Image.asset('assets/images/WeckerLogo1.png')),
                     Container(
                       height: 60,
                     ),

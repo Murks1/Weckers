@@ -9,12 +9,9 @@ import 'global_data.dart';
 import 'home_page.dart';
 
 class NeuerWeckerPage extends StatefulWidget {
-
   Wecker wecker;
 
-  NeuerWeckerPage({
-    this.wecker
-  }){
+  NeuerWeckerPage({this.wecker}) {
     this.wecker ??= new Wecker();
   }
 
@@ -32,9 +29,9 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
 
   void _onCheckButtonPressed() {
     // speichere Wecker
-    if(!RuntimeData.weckerListe.contains(widget.wecker)){
+    if (!RuntimeData.weckerListe.contains(widget.wecker)) {
       RuntimeData.weckerListe.add(widget.wecker);
-    }else{
+    } else {
       //wenn wecker schon existiert, updaten
       int indexOfWecker = RuntimeData.weckerListe.indexOf(widget.wecker);
       RuntimeData.weckerListe[indexOfWecker];
@@ -42,7 +39,8 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
 
     RuntimeData.safe();
 
-    Navigator.push(context,MaterialPageRoute(builder: (context) => HomePage()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
   // Klassenvariablen
@@ -54,7 +52,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
   String suggestedTime2String;
   String suggestedTime3String;
 
-  String _onNameChanged(String text){
+  String _onNameChanged(String text) {
     widget.wecker.name = text;
   }
 
@@ -81,17 +79,20 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
 
   //
   void updateSleepTime(TimeOfDay time) {
-
     widget.wecker.weckZeit = time;
 
     selectedTimeString = generateTimeString(widget.wecker.weckZeit);
 
     DateTime dateTime = (DateTime.now().add(Duration(hours: 1)));
-    dateTime = new DateTime(dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
+    dateTime = new DateTime(
+        dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
 
-    suggestedTime1 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 8)));
-    suggestedTime2 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7, minutes: 30)));
-    suggestedTime3 = TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7)));
+    suggestedTime1 =
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 8)));
+    suggestedTime2 = TimeOfDay.fromDateTime(
+        dateTime.subtract(Duration(hours: 7, minutes: 30)));
+    suggestedTime3 =
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7)));
 
     suggestedTime1String = generateTimeString(suggestedTime1);
     suggestedTime2String = generateTimeString(suggestedTime2);
@@ -576,7 +577,6 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                         fontSize: 20,
                                       ),
                                     ),
-
                                   ]),
 
                               Container(

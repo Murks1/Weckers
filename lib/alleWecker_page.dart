@@ -58,30 +58,32 @@ class AlleWeckerState extends State<AlleWeckerPage> {
                         ]),
                     Expanded(
                       child: ListView.builder(
-                        itemCount: RuntimeData.weckerListe.length == 0
+                          itemCount: RuntimeData.weckerListe.length == 0
                               ? 0
                               : RuntimeData.weckerListe.length * 2 - 1,
-                        itemBuilder: (BuildContext context, int index) {
-                          if (index % 2 == 1) {
-                            return Container(
-                                padding: EdgeInsets.symmetric(vertical: 15),
-                                child: Divider(
-                                  color: Colors.white,
-                                ));
-                          }
+                          itemBuilder: (BuildContext context, int index) {
+                            if (index % 2 == 1) {
+                              return Container(
+                                  padding: EdgeInsets.symmetric(vertical: 15),
+                                  child: Divider(
+                                    color: Colors.white,
+                                  ));
+                            }
 
-                          int arrayIndex = (index / 2).round();
-                          return Dismissible(
-                            key: Key(RuntimeData.weckerListe[arrayIndex].toString()),
-                            onDismissed: (direction) {
-                              setState(() {
-                                RuntimeData.weckerListe.removeAt(arrayIndex);
-                                RuntimeData.safe();
-                              });
-                            },
-                            child: WeckerDisplayWidget(
-                              wecker: RuntimeData.weckerListe[arrayIndex])
-                            );
+                            int arrayIndex = (index / 2).round();
+                            return Dismissible(
+                                key: Key(RuntimeData.weckerListe[arrayIndex]
+                                    .toString()),
+                                onDismissed: (direction) {
+                                  setState(() {
+                                    RuntimeData.weckerListe
+                                        .removeAt(arrayIndex);
+                                    RuntimeData.safe();
+                                  });
+                                },
+                                child: WeckerDisplayWidget(
+                                    wecker:
+                                        RuntimeData.weckerListe[arrayIndex]));
                           }),
                     ),
                     Row(
