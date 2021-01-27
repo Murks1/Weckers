@@ -52,6 +52,10 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
   String suggestedTime2String;
   String suggestedTime3String;
 
+  String getAufstehZeit() {
+    return suggestedTime1String;
+  }
+
   String _onNameChanged(String text) {
     widget.wecker.name = text;
   }
@@ -88,11 +92,11 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
         dateTime.year, dateTime.month, dateTime.day, time.hour, time.minute);
 
     suggestedTime1 =
-        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 8)));
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 9, minutes: 20)));
     suggestedTime2 = TimeOfDay.fromDateTime(
-        dateTime.subtract(Duration(hours: 7, minutes: 30)));
+        dateTime.subtract(Duration(hours: 7, minutes: 50)));
     suggestedTime3 =
-        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 7)));
+        TimeOfDay.fromDateTime(dateTime.subtract(Duration(hours: 6 , minutes: 20)));
 
     suggestedTime1String = generateTimeString(suggestedTime1);
     suggestedTime2String = generateTimeString(suggestedTime2);
@@ -232,7 +236,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     FlatButton(
-                                        color: Colors.blue,
+
                                         onPressed: () {},
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
@@ -248,6 +252,7 @@ class NeuerWeckerState extends State<NeuerWeckerPage> {
                                           ),
                                         )),
                                     FlatButton(
+                                        color: Colors.blue,
                                         onPressed: () {},
                                         shape: RoundedRectangleBorder(
                                             borderRadius:

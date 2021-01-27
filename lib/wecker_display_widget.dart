@@ -18,6 +18,7 @@ class WeckerDisplayWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String weckZeitString = generateTimeString(wecker.weckZeit);
+    // String schlafZeitString = generateTimeString(wecker.schlafZeit);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,6 +48,14 @@ class WeckerDisplayWidget extends StatelessWidget {
             fontSize: 20,
           ),
         ),
+        /*' Text(
+          schlafZeitString,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Roboto',
+            fontSize: 20,
+          ),
+        ),*/
       ],
     );
   }
